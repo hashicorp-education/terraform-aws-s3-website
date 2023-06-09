@@ -9,3 +9,8 @@ variable "tags" {
   type        = map(string)
   default     = {}
 }
+
+variable "FOO" {
+  description = "A variable for FOO"
+  type = string
+}

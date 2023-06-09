@@ -87,3 +87,10 @@ resource "aws_s3_object" "error" {
 
   etag = filemd5("www/error.html")
 }
+
+resource "aws_s3_object" "foo" {
+  bucket       = aws_s3_bucket.s3_bucket.id
+  key          = "foo.html"
+  content_type = "text/plain"
+  content = var.FOO
+}
